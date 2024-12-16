@@ -1,12 +1,12 @@
 console.log("Script.js är korrekt länkat.");
 //En asynkron funktion som hämtar användardata från servern med hjälp av Fetch API.
-async function fetchUsers() {
+async function fetchUsers(callback) {
   try {
     //Skickar en GET-förfrågan till servern för att hämta användardata från den angivna API-slutpunkten.
     const response = await fetch("http://localhost:3000/users");
     const users = await response.json();
     console.log(users);
-    displayUsers(users);
+    callback(users);
   } catch (error) {
     console.error("Fel vid hämtning av användare:", error);
   }
@@ -41,4 +41,4 @@ function displayUsers(users) {
   content.appendChild(userList);
 }
 
-fetchUsers();
+fetchUsers(displayUsers);
