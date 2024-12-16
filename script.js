@@ -11,6 +11,14 @@ async function fetchUsers() {
     console.error("Fel vid hämtning av användare:", error);
   }
 }
+// --ALTERNATIV-- Där vi använder .then() för att hämta data
+// fetch('http://localhost:3000/users')
+//   .then(response => response.json())   // Konverterar svaret till JSON
+//   .then(users => console.log(users))   // Loggar användardata
+//   .catch(error => console.error('Fel vid hämtning:', error)); // Hanterar fel
+
+
+
 //En funktion som skapar och lägger till HTML-element för varje användare på webbsidan.
 function displayUsers(users) {
   const content = document.getElementById("content");
