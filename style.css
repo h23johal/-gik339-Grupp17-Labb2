@@ -16,8 +16,9 @@ h1 {
 
 #content:hover li:not(:hover) {
   filter: saturate(0.7);
-  transition: all ease 300ms;
+  transition: all ease-in-out 150ms;
   opacity: 0.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
 }
 
 ul {
@@ -26,19 +27,20 @@ ul {
 }
 
 li {
-  margin: 10px;
+  margin: 5px;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 0;
   color: black;
   font-size: 18px;
-  transition: all ease 300ms;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0); /* Default shadow */
+  transition: all ease-in-out 150ms;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
 }
 
 li:hover {
-  transform: scale(1.05);
-  transition: all ease 300ms;
+  transform: scale(1.02);
+  transition: all ease-in-out 150ms;
+  border-radius: 10px;
   filter: saturate(1);
   opacity: 1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Default shadow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
